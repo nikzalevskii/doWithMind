@@ -1,5 +1,5 @@
 .container {
-  max-width: 600px;
+  width: min(600px, 70%);
   margin-top: 1rem;
   margin: 0 auto;
   padding: 1.5rem;
@@ -30,6 +30,8 @@
 .footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
   align-items: center;
   margin-top: 1rem;
 
@@ -50,4 +52,22 @@
 .footer button.active {
   border: 1px solid #3b82f6;
   background-color: #f0f8ff;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer span,
+  .footer button {
+    font-size: 0.75rem;
+    margin: 0.25rem;
+  }
+
+  .footer button {
+    width: 100%; 
+    text-align: left; 
+  }
 }

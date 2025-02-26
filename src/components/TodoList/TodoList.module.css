@@ -51,10 +51,20 @@
 .checkbox:checked::after {
   content: "✔";
   color: rgb(102, 99, 99);
-  font-size: 14px;
 }
 
 .completed span {
   text-decoration: line-through;
   color: #9ca3af;
+}
+
+@media (max-width: 600px) {
+  .item {
+    padding: 0.5rem 0.1rem;
+    font-size: 1.2rem;
+  }
+  .checkbox {
+    width: 20px;
+    height: 20px;
+  }
 }
