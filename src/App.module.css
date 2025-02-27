@@ -4,14 +4,14 @@
   margin: 0 auto;
   padding: 1.5rem;
   background-color: #fffffff1;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 
   .logo {
     display: block;
     font-size: 0.8rem;
     font-weight: bold;
-    color: #9a9da0;
+    color: var(--color-secondary);
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
     position: relative;
@@ -24,7 +24,7 @@
   margin-bottom: 1rem;
   font-family: "Helvetica", "Arial", sans-serif;
   font-weight: 50;
-  color: rgb(156, 138, 138);
+  color: var(--color-title);
 }
 
 .footer {
@@ -46,12 +46,12 @@
   border: 1px solid transparent;
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 .footer button.active {
-  border: 1px solid #3b82f6;
-  background-color: #f0f8ff;
+  border: 1px solid var(--color-button-active);
+  background-color: var(--color-button-bg-active);
 }
 
 @media (max-width: 600px) {
@@ -67,7 +67,7 @@
   }
 
   .footer button {
-    width: 100%; 
-    text-align: left; 
+    width: 100%;
+    text-align: left;
   }
 }

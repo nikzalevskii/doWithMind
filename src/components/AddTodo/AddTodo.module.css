@@ -7,19 +7,19 @@
   box-sizing: border-box;
   padding: 0.75rem;
   font-size: 1.2rem;
-  border: 2px solid #ccc;
-  border-radius: 0.5rem;
-  transition: border-color 0.3s ease;
-  color: rgba(35, 33, 33, 0.808);
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  color: var(--color-text);
 
   &:focus {
     outline: none;
-    border-color: #92b6f0;
+    border-color: var(--color-focus);
   }
   &::placeholder {
     font-style: italic;
     opacity: 1;
-    color: rgb(188, 184, 184);
+    color: var(--color-placeholder);
   }
 }
 
@@ -27,5 +27,4 @@
   .input {
     font-size: 1rem;
   }
-
 }

@@ -1,9 +1,27 @@
+:root {
+  --color-primary: rgba(138, 80, 193, 0.463);
+  --color-secondary: #9a9da0;
+  --color-text: rgba(35, 33, 33, 0.808);
+  --color-title: rgb(156, 138, 138);
+  --color-placeholder: rgb(188, 184, 184);
+  --color-border: #ccc;
+  --color-focus: #92b6f0;
+  --color-checkbox: #9a9797;
+  --color-checkbox-checked: #4caf50;
+  --color-checkbox-checked-after: rgb(102, 99, 99);
+  --color-completed: #9ca3af;
+  --color-button-active: #3b82f6;
+  --color-button-bg-active: #f0f8ff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 0.5rem;
+  --transition: all 0.3s ease;
+}
+
 html {
   height: 100%;
   margin: 0;
   padding: 20px 0 0 0;
-  /* background: linear-gradient(to bottom, #a894a8, #852479); */
-  background-color: rgba(138, 80, 193, 0.463);
+  background-color: var(--color-primary);
 }
 
 body {
