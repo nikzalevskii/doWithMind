@@ -1,50 +1,67 @@
-# React + TypeScript + Vite
+# DoWithMind  
+**A Todo App with Task Management and Filtering**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [https://do-with-mind.vercel.app/](https://do-with-mind.vercel.app/)  
 
-Currently, two official plugins are available:
+## About  
+DoWithMind is a modern task management application built using **React**, **Redux Toolkit**, and **TypeScript**. It allows users to create, manage, and organize their tasks efficiently. The app provides features like task filtering (all, active, completed), marking tasks as completed, and clearing completed tasks.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project is designed with a clean and intuitive user interface, ensuring a seamless experience for managing daily tasks.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Key Features  
+- **Task Creation**: Add new tasks with a simple input field.  
+- **Task Filtering**: Filter tasks by status: **All**, **Active**, or **Completed**.  
+- **Task Completion**: Mark tasks as completed with a single click.  
+- **Clear Completed Tasks**: Remove all completed tasks with one button.  
+- **Persistent State**: Tasks are saved in the browser's local storage using **Redux Persist**.  
+- **Responsive Design**: Optimized for all screen sizes, ensuring a consistent experience on desktops, tablets, and mobile devices.  
+- **Modern Tech Stack**: Built with **React**, **Redux Toolkit**, **TypeScript**, and **CSS Modules** for modularity and scalability.  
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Technology Stack  
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Frontend:  
+- **React**: A JavaScript library for building user interfaces.  
+- **Redux Toolkit**: A powerful state management library for managing global application state.  
+- **TypeScript**: A typed superset of JavaScript for better code quality and maintainability.  
+- **React Testing Library**: A testing utility for React components.  
+- **Jest**: A JavaScript testing framework for unit and integration tests.  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Styling:  
+- **CSS Modules**: Modular styling to avoid naming conflicts.  
+- **Flexbox & Grid**: Modern layout techniques for responsive design.  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Build Tool:  
+- **Vite**: A modern build tool that provides fast development server startup and optimized builds for production.  
+
+### State Management:  
+- **Redux Toolkit**: Simplifies state management with features like Immer for immutable updates.  
+- **Redux Persist**: Persists the Redux store to local storage for data persistence.  
+
+---
+
+## Installation and Setup  
+
+To run this project locally, follow these steps:  
+
+### Prerequisites  
+- Node.js (v16 or higher)  
+- npm or yarn  
+
+### Steps  
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/your-username/dowithmind.git
+   cd dowithmind
+   ```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+3. **Run the Development Server**
+   ```bash
+   npm run start
+   ```
