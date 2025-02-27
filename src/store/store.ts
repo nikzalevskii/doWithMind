@@ -2,11 +2,12 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import todoReducer from "./slices/todoSlice";
 import { persistReducer, persistStore } from "redux-persist";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
+import { PERSIST_KEY } from "../constants/constants";
 
 const storage = createWebStorage("local");
 
 const persistConfig = {
-  key: "root",
+  key: PERSIST_KEY,
   storage,
 };
 

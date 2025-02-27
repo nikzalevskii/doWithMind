@@ -3,10 +3,11 @@ import { store } from "./store/store";
 import { Provider } from "react-redux";
 import App from "./App";
 import { addTodo, toggleTodo } from "./store/slices/todoSlice";
+import { RESET_STATE } from "./constants/constants";
 
 describe("App Component", () => {
   beforeEach(() => {
-    store.dispatch({ type: "RESET_STATE" });
+    store.dispatch({ type: RESET_STATE });
   });
 
   test("отображает заголовки", () => {

@@ -3,10 +3,12 @@ import { addTodo, setFilter, toggleTodo } from "../../store/slices/todoSlice";
 import { store } from "../../store/store";
 import { Provider } from "react-redux";
 import TodoList from "./TodoList";
+import { FILTERS } from "../../constants/filters";
+import { RESET_STATE } from "../../constants/constants";
 
 describe("TodoList Component", () => {
   beforeEach(() => {
-    store.dispatch({ type: "RESET_STATE" });
+    store.dispatch({ type: RESET_STATE });
     store.dispatch(addTodo("Задача 1"));
     store.dispatch(addTodo("Задача 2"));
     const state = store.getState().todo.todos;
@@ -15,7 +17,7 @@ describe("TodoList Component", () => {
   });
 
   test('отображает все задачи при фильтре "all"', () => {
-    store.dispatch(setFilter("all"));
+    store.dispatch(setFilter(FILTERS.ALL));
     render(
       <Provider store={store}>
         <TodoList />
@@ -26,7 +28,7 @@ describe("TodoList Component", () => {
   });
 
   test('отображает все активные задачи при фильтре "active"', async () => {
-    store.dispatch(setFilter("active"));
+    store.dispatch(setFilter(FILTERS.ACTIVE));
     render(
       <Provider store={store}>
         <TodoList />
@@ -38,7 +40,7 @@ describe("TodoList Component", () => {
   });
 
   test('отображает только выполненные задачи при фильтре "completed"', async () => {
-    store.dispatch(setFilter("completed"));
+    store.dispatch(setFilter(FILTERS.COMPLETED));
     render(
       <Provider store={store}>
         <TodoList />
@@ -49,7 +51,7 @@ describe("TodoList Component", () => {
   });
 
   test("переключает статус задачи при клике на чекбокс", () => {
-    store.dispatch(setFilter("all"));
+    store.dispatch(setFilter(FILTERS.ALL));
     render(
       <Provider store={store}>
         <TodoList />
@@ -66,13 +68,13 @@ describe("TodoList Component", () => {
   });
 
   test("применяет правильные классы для выполненных задач", () => {
-    store.dispatch(setFilter("all"));
+    store.dispatch(setFilter(FILTERS.ALL));
     render(
       <Provider store={store}>
         <TodoList />
       </Provider>
     );
     const completedTask = screen.getByText("Задача 2").closest("li");
-    expect(completedTask).toHaveClass("completed");
+    expect(completedTask).toHaveClass(FILTERS.COMPLETED);
   });
 });

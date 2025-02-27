@@ -1,5 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { FilterType, Todo } from "../../types/types";
+import { FILTERS } from "../../constants/filters";
+import { RESET_STATE } from "../../constants/constants";
 
 interface TodoState {
   todos: Todo[];
@@ -9,7 +11,7 @@ interface TodoState {
 
 const initialState: TodoState = {
   todos: [],
-  filter: "all",
+  filter: FILTERS.ALL,
   nextId: 1,
 };
 
@@ -36,7 +38,7 @@ const todoSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase("RESET_STATE", () => initialState);
+    builder.addCase(RESET_STATE, () => initialState);
   },
 });
 

@@ -4,6 +4,7 @@ import TodoList from "./components/TodoList/TodoList";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "./store/store";
 import { clearCompleted, setFilter } from "./store/slices/todoSlice";
+import { FILTERS } from "./constants/filters";
 
 function App() {
   const todos = useSelector((state: RootState) => state.todo.todos);
@@ -23,20 +24,20 @@ function App() {
           {activeCount} {activeCount === 1 ? "item" : "items"} left
         </span>
         <button
-          onClick={() => dispatch(setFilter("all"))}
-          className={filter === "all" ? styles.active : ""}
+          onClick={() => dispatch(setFilter(FILTERS.ALL))}
+          className={filter === FILTERS.ALL ? styles.active : ""}
         >
           All
         </button>
         <button
-          onClick={() => dispatch(setFilter("active"))}
-          className={filter === "active" ? styles.active : ""}
+          onClick={() => dispatch(setFilter(FILTERS.ACTIVE))}
+          className={filter === FILTERS.ACTIVE ? styles.active : ""}
         >
           Active
         </button>
         <button
-          onClick={() => dispatch(setFilter("completed"))}
-          className={filter === "completed" ? styles.active : ""}
+          onClick={() => dispatch(setFilter(FILTERS.COMPLETED))}
+          className={filter === FILTERS.COMPLETED ? styles.active : ""}
         >
           Completed
         </button>
