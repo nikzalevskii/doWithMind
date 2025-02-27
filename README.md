@@ -54,8 +54,8 @@ To run this project locally, follow these steps:
 ### Steps  
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/your-username/dowithmind.git
-   cd dowithmind
+   git clone https://github.com/nikzalevskii/doWithMind.git
+   cd doWithMind
    ```
 2. **Install Dependencies**
    ```bash
